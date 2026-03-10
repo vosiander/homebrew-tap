@@ -5,23 +5,23 @@
 class Pgsnap < Formula
   desc "PostgreSQL backup and restore tool for Kubernetes"
   homepage "https://github.com/vosiander/pgsnap"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vosiander/pgsnap/releases/download/v1.0.0/pgsnap_1.0.0_darwin_amd64.tar.gz"
-      sha256 "9170102e06cd52db94b2e049b43987f7128c545df110cbecb887d6921872401f"
+      url "https://github.com/vosiander/pgsnap/releases/download/v1.1.0/pgsnap_1.1.0_darwin_amd64.tar.gz"
+      sha256 "46bd224e3e9d1ba46705864d9f98601c94877cc6caf834741f157689abaae11a"
 
-      def install
+      define_method(:install) do
         bin.install "pgsnap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vosiander/pgsnap/releases/download/v1.0.0/pgsnap_1.0.0_darwin_arm64.tar.gz"
-      sha256 "62d9d879298e4fdae5bb7972d7803cdea9f0298b6d42fb002eae938f5997b9d5"
+      url "https://github.com/vosiander/pgsnap/releases/download/v1.1.0/pgsnap_1.1.0_darwin_arm64.tar.gz"
+      sha256 "b3b41e78a85abe97da2e5131686c65d2d496ec88130dac62b66984bda087201b"
 
-      def install
+      define_method(:install) do
         bin.install "pgsnap"
       end
     end
@@ -29,16 +29,16 @@ class Pgsnap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vosiander/pgsnap/releases/download/v1.0.0/pgsnap_1.0.0_linux_amd64.tar.gz"
-      sha256 "78844f6f94e4549145de35c1c7b262c043ff9c5865a3b36c95acd6bd808bca8e"
-      def install
+      url "https://github.com/vosiander/pgsnap/releases/download/v1.1.0/pgsnap_1.1.0_linux_amd64.tar.gz"
+      sha256 "9b182b14811ce5481ac3128011cca75285da67498cef66dc324063948807b1aa"
+      define_method(:install) do
         bin.install "pgsnap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vosiander/pgsnap/releases/download/v1.0.0/pgsnap_1.0.0_linux_arm64.tar.gz"
-      sha256 "b04f86687b15ed2d75b6c98e2d5eb3f8bd9c61f33d2f1a90ceab96e2232b7418"
-      def install
+      url "https://github.com/vosiander/pgsnap/releases/download/v1.1.0/pgsnap_1.1.0_linux_arm64.tar.gz"
+      sha256 "749c28e6623462d7c8d76b417e1ef8f7cf9497b8087b033bfa8ab1115760f05d"
+      define_method(:install) do
         bin.install "pgsnap"
       end
     end

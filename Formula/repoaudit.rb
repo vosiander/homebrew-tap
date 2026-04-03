@@ -5,21 +5,21 @@
 class Repoaudit < Formula
   desc "Automated security audit for Git repositories"
   homepage "https://github.com/vosiander/repo-audit"
-  version "0.1.0"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vosiander/repo-audit/releases/download/v0.1.0/repoaudit_0.1.0_darwin_amd64.tar.gz"
-      sha256 "c62a879021ce3e550eb3a566ac6964445323279231bbd0e92ae9a9fbf5682aa9"
+      url "https://github.com/vosiander/repo-audit/releases/download/v1.0.0/repoaudit_1.0.0_darwin_amd64.tar.gz"
+      sha256 "6d3d8258a2940ee391bcb19a2dd244ee566e8d9023557457d2e065da399f6154"
 
       define_method(:install) do
         bin.install "repoaudit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vosiander/repo-audit/releases/download/v0.1.0/repoaudit_0.1.0_darwin_arm64.tar.gz"
-      sha256 "3120466b86f546a59d2300724b97de2114eaa4a5bade85438a22421607daf6c8"
+      url "https://github.com/vosiander/repo-audit/releases/download/v1.0.0/repoaudit_1.0.0_darwin_arm64.tar.gz"
+      sha256 "decb2369f3733425184313cc1aeb029dbf9cb3862b4781c41d0c261564f32843"
 
       define_method(:install) do
         bin.install "repoaudit"
@@ -29,15 +29,15 @@ class Repoaudit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vosiander/repo-audit/releases/download/v0.1.0/repoaudit_0.1.0_linux_amd64.tar.gz"
-      sha256 "b9b60b227ab668f2c1c04c56025e92b9b71f9c0673c5513bfff28f9389ec8be2"
+      url "https://github.com/vosiander/repo-audit/releases/download/v1.0.0/repoaudit_1.0.0_linux_amd64.tar.gz"
+      sha256 "fefc075fb9c7086219b01113e227ff3b4f520df4ef85f096fb9c877badc6de11"
       define_method(:install) do
         bin.install "repoaudit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vosiander/repo-audit/releases/download/v0.1.0/repoaudit_0.1.0_linux_arm64.tar.gz"
-      sha256 "af00d21efc99552b62cc6b5928c8f31338ae716337a3271d89615e81b9b33584"
+      url "https://github.com/vosiander/repo-audit/releases/download/v1.0.0/repoaudit_1.0.0_linux_arm64.tar.gz"
+      sha256 "981406249c3f4a85dc3f2cb7cd58d4580f77a93065ec5de143e8a0e6a3de8a40"
       define_method(:install) do
         bin.install "repoaudit"
       end
